@@ -1,4 +1,4 @@
-let testString = "hey"
+
 
 const repeatString = function(str,n) {
     let result = ""
@@ -9,7 +9,7 @@ const repeatString = function(str,n) {
     }
    return result;
 };
-  // console.log(repeatString(testString))
+
 
 // Do not edit below this line
 module.exports = repeatString;

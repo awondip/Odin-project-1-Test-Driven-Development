@@ -1,17 +1,25 @@
 const sumAll = function( a, b) {
 
-    const sumArray = Array.from(arguments)
-    
+  if (a > b) {
+    let temp = a
+    a = b
+    b = temp
+  }
+
+  if (
+    a < 0 || b < 0 ||
+    typeof a != 'number' || typeof b != 'number'
+  ) {
+    return 'ERROR'
+  }
+  
+  let sum  = 0;
+    for (let i = a; i < b + 1; i++) {
+       sum += i;
      
-    for (let i = a; i < sumArray.length; i++) {
-
-        let  sum = sumArray[i] + sumArray[i]
-
-        return sum;        
     }
-    
-
+   return  sum;
 };
-  console.log(sumAll(1, 5))
+  
 // Do not edit below this line
 module.exports = sumAll;

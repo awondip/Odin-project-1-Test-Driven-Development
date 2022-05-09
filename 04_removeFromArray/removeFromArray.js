@@ -1,19 +1,20 @@
-const removeFromArray = function(a, b, c, d) {
+const removeFromArray = function(array) {
 
-    const newArray = Array.from(arguments);
+    const newArray = Array.from(arguments)
+    newArray.slice(0, 1);
+    newArray.forEach(element =>{
+        let arrayNum = array.indexOf(element)
 
-    for(let i=0; i<= newArray.length; i++){
+        if (arrayNum > -1) {
 
-        if (newArray[i] === 3){
-
-            newArray.splice(i, 1)
-
+            array.splice(arrayNum, 1)
 
         }
-    }
-   return newArray;   
+    } )
+   
+   return array;   
 };
- console.log(removeFromArray(1, 2, 3, 4))
+ 
 
 // Do not edit below this line
 module.exports = removeFromArray;
